@@ -184,7 +184,7 @@ persistent_processes = [
   'thermald',
   'logmessaged',
   'ui',
-  'uploader',
+  # 'uploader',
 ]
 if ANDROID:
   persistent_processes += [
