@@ -631,6 +631,7 @@ struct ModelData {
   struct LongitudinalData {
     speeds @0 :List(Float32);
     accelerations @1 :List(Float32);
+    distances @1 :List(Float32);
   }
 }
 
