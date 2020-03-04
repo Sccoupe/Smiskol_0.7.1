@@ -35,7 +35,7 @@ _A_CRUISE_MAX_BP = [0.,  6.4, 22.5, 40.]
 _A_TOTAL_MAX_V = [1.7, 3.2]
 _A_TOTAL_MAX_BP = [20., 40.]
 
-ACCEL_LIMIT = 1.5
+ACCEL_LIMIT = 1.8
 FPS = 20
 
 
@@ -138,7 +138,7 @@ class Planner():
 
       desired_speed = speed + np.clip(distance/3.0, -speed*.1 - .5, speed*.1 + .5)
       speed_change = desired_speed - v_ego
-      desired_accel = np.clip(speed_change/5.0 + accel, -ACCEL_LIMIT, ACCEL_LIMIT)
+      desired_accel = np.clip(speed_change/3.5 + accel, -ACCEL_LIMIT, ACCEL_LIMIT)
 
       self.a_model = desired_accel
       self.v_model = desired_speed
